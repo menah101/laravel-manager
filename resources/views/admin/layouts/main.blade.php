@@ -1,8 +1,23 @@
-@include('admin.layouts.navbar')
-@include('admin.layouts.sidebar')
+@include('admin.layouts.header')
 
-    <!-- content -->
-    @yield('content')
-    <!-- end content -->
+<!-- Begin page -->
+<div id="wrapper">
 
-@include('admin.layouts.footer')
+    <!-- Top Bar Start -->
+    @include('admin.layouts.topbar')
+    <!-- Top Bar End -->
+
+    <!-- ========== Left Sidebar Start ========== -->
+    @include('admin.layouts.sidebar')
+    <!-- Left Sidebar End -->
+
+    <!-- ============================================================== -->
+    <!-- Start right Content here -->
+    <!-- ============================================================== -->
+    <div class="content-page">
+        <!-- Start content -->
+        @yield('content')
+        <!-- content -->
+
+
+        @include('admin.layouts.footer')

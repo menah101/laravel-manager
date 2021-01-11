@@ -1,58 +1,171 @@
-<div id="layoutSidenav">
-            <div id="layoutSidenav_nav">
-                <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
-                    <div class="sb-sidenav-menu">
-                        <div class="nav">
-                            <div class="sb-sidenav-menu-heading">Core</div>
-                            <a class="nav-link" href="index.html"
-                                ><div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
-                                Dashboard</a
-                            >
-                            <div class="sb-sidenav-menu-heading">Interface</div>
-                            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts"
-                                ><div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
-                                Layouts
-                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div
-                            ></a>
-                            <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
-                                <nav class="sb-sidenav-menu-nested nav"><a class="nav-link" href="layout-static.html">Static Navigation</a><a class="nav-link" href="layout-sidenav-light.html">Light Sidenav</a></nav>
-                            </div>
-                            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages"
-                                ><div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
-                                Pages
-                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div
-                            ></a>
-                            <div class="collapse" id="collapsePages" aria-labelledby="headingTwo" data-parent="#sidenavAccordion">
-                                <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
-                                    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#pagesCollapseAuth" aria-expanded="false" aria-controls="pagesCollapseAuth"
-                                        >Authentication
-                                        <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div
-                                    ></a>
-                                    <div class="collapse" id="pagesCollapseAuth" aria-labelledby="headingOne" data-parent="#sidenavAccordionPages">
-                                        <nav class="sb-sidenav-menu-nested nav"><a class="nav-link" href="login.html">Login</a><a class="nav-link" href="register.html">Register</a><a class="nav-link" href="password.html">Forgot Password</a></nav>
-                                    </div>
-                                    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#pagesCollapseError" aria-expanded="false" aria-controls="pagesCollapseError"
-                                        >Error
-                                        <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div
-                                    ></a>
-                                    <div class="collapse" id="pagesCollapseError" aria-labelledby="headingOne" data-parent="#sidenavAccordionPages">
-                                        <nav class="sb-sidenav-menu-nested nav"><a class="nav-link" href="401.html">401 Page</a><a class="nav-link" href="404.html">404 Page</a><a class="nav-link" href="500.html">500 Page</a></nav>
-                                    </div>
-                                </nav>
-                            </div>
-                            <div class="sb-sidenav-menu-heading">Addons</div>
-                            <a class="nav-link" href="charts.html"
-                                ><div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
-                                Charts</a
-                            ><a class="nav-link" href="tables.html"
-                                ><div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
-                                Tables</a
-                            >
-                        </div>
-                    </div>
-                    <div class="sb-sidenav-footer">
-                        <div class="small">Logged in as:</div>
-                        Start Bootstrap
-                    </div>
-                </nav>
-            </div>
+<div class="left side-menu">
+    <div class="slimscroll-menu" id="remove-scroll">
+
+        <!--- Sidemenu -->
+        <div id="sidebar-menu">
+            <!-- Left Menu Start -->
+            <ul class="metismenu" id="side-menu">
+                <li class="menu-title">Main</li>
+                <li>
+                    <a href="index.html" class="waves-effect">
+                        <i class="dripicons-meter"></i><span class="badge badge-info badge-pill float-right">2</span>
+                        <span> Dashboard </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:void(0);" class="waves-effect"><i class="dripicons-message"></i><span> Email
+                            <span class="float-right menu-arrow"><i class="mdi mdi-chevron-right"></i></span>
+                        </span></a>
+                    <ul class="submenu">
+                        <li><a href="email-inbox.html">Inbox</a></li>
+                        <li><a href="email-read.html">Email Read</a></li>
+                        <li><a href="email-compose.html">Email Compose</a></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="calendar.html" class="waves-effect"><i class="dripicons-calendar"></i><span> Calendar
+                        </span></a>
+                </li>
+
+                <li class="menu-title">Components</li>
+
+                <li>
+                    <a href="javascript:void(0);" class="waves-effect"><i class="dripicons-briefcase"></i> <span> UI
+                            Elements <span class="float-right menu-arrow"><i class="mdi mdi-chevron-right"></i></span>
+                        </span> </a>
+                    <ul class="submenu">
+                        <li><a href="ui-alerts.html">Alerts</a></li>
+                        <li><a href="ui-badge.html">Badge</a></li>
+                        <li><a href="ui-buttons.html">Buttons</a></li>
+                        <li><a href="ui-cards.html">Cards</a></li>
+                        <li><a href="ui-dropdowns.html">Dropdowns</a></li>
+                        <li><a href="ui-navs.html">Navs</a></li>
+                        <li><a href="ui-tabs-accordions.html">Tabs &amp; Accordions</a></li>
+                        <li><a href="ui-modals.html">Modals</a></li>
+                        <li><a href="ui-images.html">Images</a></li>
+                        <li><a href="ui-progressbars.html">Progress Bars</a></li>
+                        <li><a href="ui-lightbox.html">Lightbox</a></li>
+                        <li><a href="ui-pagination.html">Pagination</a></li>
+                        <li><a href="ui-popover-tooltips.html">Popover & Tooltips</a></li>
+                        <li><a href="ui-carousel.html">Carousel</a></li>
+                        <li><a href="ui-video.html">Video</a></li>
+                        <li><a href="ui-typography.html">Typography</a></li>
+                        <li><a href="ui-sweet-alert.html">Sweet-Alert</a></li>
+                        <li><a href="ui-grid.html">Grid</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript:void(0);" class="waves-effect"><i class="dripicons-broadcast"></i> <span> Icons
+                            <span class="float-right menu-arrow"><i class="mdi mdi-chevron-right"></i></span></span>
+                    </a>
+                    <ul class="submenu">
+                        <li><a href="icons-material.html">Material Design</a></li>
+                        <li><a href="icons-ion.html">Ion Icons</a></li>
+                        <li><a href="icons-fontawesome.html">Font Awesome</a></li>
+                        <li><a href="icons-themify.html">Themify Icons</a></li>
+                        <li><a href="icons-dripicons.html">Dripicons</a></li>
+                        <li><a href="icons-typicons.html">Typicons Icons</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript:void(0);" class="waves-effect"><i class="dripicons-to-do"></i><span> Forms <span
+                                class="badge badge-pill badge-success float-right">8</span> </span></a>
+                    <ul class="submenu">
+                        <li><a href="form-elements.html">Form Elements</a></li>
+                        <li><a href="form-validation.html">Form Validation</a></li>
+                        <li><a href="form-advanced.html">Form Advanced</a></li>
+                        <li><a href="form-editors.html">Form Editors</a></li>
+                        <li><a href="form-uploads.html">Form File Upload</a></li>
+                        <li><a href="form-mask.html">Form Mask</a></li>
+                        <li><a href="form-summernote.html">Summernote</a></li>
+                        <li><a href="form-xeditable.html">Form Xeditable</a></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="javascript:void(0);" class="waves-effect"><i class="dripicons-graph-bar"></i><span> Charts
+                            <span class="float-right menu-arrow"><i class="mdi mdi-chevron-right"></i></span>
+                        </span></a>
+                    <ul class="submenu">
+                        <li><a href="charts-morris.html">Morris Chart</a></li>
+                        <li><a href="charts-chartist.html">Chartist Chart</a></li>
+                        <li><a href="charts-chartjs.html">Chartjs Chart</a></li>
+                        <li><a href="charts-flot.html">Flot Chart</a></li>
+                        <li><a href="charts-c3.html">C3 Chart</a></li>
+                        <li><a href="charts-other.html">Jquery Knob Chart</a></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="javascript:void(0);" class="waves-effect"><i class="dripicons-view-thumb"></i><span> Tables
+                            <span class="float-right menu-arrow"><i class="mdi mdi-chevron-right"></i></span>
+                        </span></a>
+                    <ul class="submenu">
+                        <li><a href="tables-basic.html">Basic Tables</a></li>
+                        <li><a href="tables-datatable.html">Data Table</a></li>
+                        <li><a href="tables-responsive.html">Responsive Table</a></li>
+                        <li><a href="tables-editable.html">Editable Table</a></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="javascript:void(0);" class="waves-effect"><i class="dripicons-map"></i><span> Maps <span
+                                class="badge badge-pill badge-danger float-right">2</span> </span></a>
+                    <ul class="submenu">
+                        <li><a href="maps-google.html"> Google Map</a></li>
+                        <li><a href="maps-vector.html"> Vector Map</a></li>
+                    </ul>
+                </li>
+
+                <li class="menu-title">Extras</li>
+                <li>
+                    <a href="javascript:void(0);" class="waves-effect"><i class="dripicons-archive"></i><span> Advanced
+                            UI <span class="float-right menu-arrow"><i class="mdi mdi-chevron-right"></i></span>
+                        </span></a>
+                    <ul class="submenu">
+                        <li><a href="advanced-animation.html">Animation</a></li>
+                        <li><a href="advanced-highlight.html">Highlight</a></li>
+                        <li><a href="advanced-rating.html">Rating</a></li>
+                        <li><a href="advanced-nestable.html">Nestable</a></li>
+                        <li><a href="advanced-alertify.html">Alertify</a></li>
+                        <li><a href="advanced-rangeslider.html">Range Slider</a></li>
+                        <li><a href="advanced-sessiontimeout.html">Session Timeout</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript:void(0);" class="waves-effect"><i class="dripicons-box"></i><span>
+                            Authentication <span class="float-right menu-arrow"><i
+                                    class="mdi mdi-chevron-right"></i></span> </span></a>
+                    <ul class="submenu">
+                        <li><a href="pages-login.html">Login</a></li>
+                        <li><a href="pages-register.html">Register</a></li>
+                        <li><a href="pages-recoverpw.html">Recover Password</a></li>
+                        <li><a href="pages-lock-screen.html">Lock Screen</a></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="javascript:void(0);" class="waves-effect"><i class="dripicons-duplicate"></i><span> Extra
+                            Pages <span class="float-right menu-arrow"><i class="mdi mdi-chevron-right"></i></span>
+                        </span></a>
+                    <ul class="submenu">
+                        <li><a href="pages-timeline.html">Timeline</a></li>
+                        <li><a href="pages-invoice.html">Invoice</a></li>
+                        <li><a href="pages-directory.html">Directory</a></li>
+                        <li><a href="pages-blank.html">Blank Page</a></li>
+                        <li><a href="pages-404.html">Error 404</a></li>
+                        <li><a href="pages-500.html">Error 500</a></li>
+                    </ul>
+                </li>
+
+            </ul>
+
+        </div>
+        <!-- Sidebar -->
+        <div class="clearfix"></div>
+
+    </div>
+    <!-- Sidebar -left -->
+
+</div>

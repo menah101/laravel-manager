@@ -1,30 +1,38 @@
-<footer class="py-4 bg-light mt-auto">
-                    <div class="container-fluid">
-                        <div class="d-flex align-items-center justify-content-between small">
-                            <div class="text-muted">Copyright &copy; Your Website 2019</div>
-                            <div>
-                                <a href="#">Privacy Policy</a>
-                                &middot;
-                                <a href="#">Terms &amp; Conditions</a>
-                            </div>
-                        </div>
-                    </div>
-                </footer>
-            </div>
-        </div>
-        <script src="https://code.jquery.com/jquery-3.4.1.min.js" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
-        
-        <script src="{{asset('backend/dist/js/scripts.js')}}"></script>
-        
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
-        
-        <script src="{{asset('backend/dist/assets/demo/chart-area-demo.js')}}"></script>
-        <script src="{{asset('backend/dist/assets/demo/chart-bar-demo.js')}}"></script>
+<footer class="footer">
+    © 2018 - 2019 Foxia <span class="d-none d-sm-inline-block"> - Crafted with <i class="mdi mdi-heart text-danger"></i>
+        by Themesbrand.</span>
+</footer>
+</div>
 
-        <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js" crossorigin="anonymous"></script>
-        <script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js" crossorigin="anonymous"></script>
-        
-        <script src="{{asset('backend/dist/assets/demo/datatables-demo.js')}}"></script>
-    </body>
+
+<!-- ============================================================== -->
+<!-- End Right content here -->
+<!-- ============================================================== -->
+
+
+</div>
+<!-- END wrapper -->
+
+
+<!-- jQuery  -->
+<script src="{{ asset('backend/assets/js/jquery.min.js') }}"></script>
+<script src="{{ asset('backend/assets/js/bootstrap.bundle.min.js') }}"></script>
+<script src="{{ asset('backend/assets/js/modernizr.min.js') }}"></script>
+<script src="{{ asset('backend/assets/js/metisMenu.min.js') }}"></script>
+<script src="{{ asset('backend/assets/js/jquery.slimscroll.js') }}"></script>
+<script src="{{ asset('backend/assets/js/waves.js') }}"></script>
+
+<script src="{{ asset('backend/plugins/peity-chart/jquery.peity.min.js') }}"></script>
+
+<!--Morris Chart-->
+<script src="{{ asset('backend/plugins/morris/morris.min.js') }}"></script>
+<script src="{{ asset('backend/plugins/raphael/raphael-min.js') }}"></script>
+
+<script src="{{ asset('backend/assets/pages/dashboard.js') }}"></script>
+
+<!-- App js -->
+<script src="{{ asset('backend/assets/js/app.js') }}"></script>
+
+</body>
+
 </html>
