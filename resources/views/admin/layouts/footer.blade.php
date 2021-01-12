@@ -13,9 +13,6 @@
 </div>
 <!-- END wrapper -->
 
-
-<!-- jQuery  -->
-<script src="{{ asset('backend/assets/js/jquery.min.js') }}"></script>
 <script src="{{ asset('backend/assets/js/bootstrap.bundle.min.js') }}"></script>
 <script src="{{ asset('backend/assets/js/modernizr.min.js') }}"></script>
 <script src="{{ asset('backend/assets/js/metisMenu.min.js') }}"></script>

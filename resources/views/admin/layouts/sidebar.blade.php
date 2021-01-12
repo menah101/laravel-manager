@@ -13,13 +13,11 @@
                     </a>
                 </li>
                 <li>
-                    <a href="javascript:void(0);" class="waves-effect"><i class="dripicons-message"></i><span> Email
+                    <a href="javascript:void(0);" class="waves-effect"><i class="dripicons-message"></i><span> Department
                             <span class="float-right menu-arrow"><i class="mdi mdi-chevron-right"></i></span>
                         </span></a>
                     <ul class="submenu">
-                        <li><a href="email-inbox.html">Inbox</a></li>
-                        <li><a href="email-read.html">Email Read</a></li>
-                        <li><a href="email-compose.html">Email Compose</a></li>
+                        <li><a href="{{route('departments.index')}}">Department List</a></li>
                     </ul>
                 </li>
 
@@ -69,8 +67,7 @@
                     </ul>
                 </li>
                 <li>
-                    <a href="javascript:void(0);" class="waves-effect"><i class="dripicons-to-do"></i><span> Forms <span
-                                class="badge badge-pill badge-success float-right">8</span> </span></a>
+                    <a href="javascript:void(0);" class="waves-effect"><i class="dripicons-to-do"></i><span> Forms <span class="badge badge-pill badge-success float-right">8</span> </span></a>
                     <ul class="submenu">
                         <li><a href="form-elements.html">Form Elements</a></li>
                         <li><a href="form-validation.html">Form Validation</a></li>
@@ -110,8 +107,7 @@
                 </li>
 
                 <li>
-                    <a href="javascript:void(0);" class="waves-effect"><i class="dripicons-map"></i><span> Maps <span
-                                class="badge badge-pill badge-danger float-right">2</span> </span></a>
+                    <a href="javascript:void(0);" class="waves-effect"><i class="dripicons-map"></i><span> Maps <span class="badge badge-pill badge-danger float-right">2</span> </span></a>
                     <ul class="submenu">
                         <li><a href="maps-google.html"> Google Map</a></li>
                         <li><a href="maps-vector.html"> Vector Map</a></li>
@@ -135,8 +131,7 @@
                 </li>
                 <li>
                     <a href="javascript:void(0);" class="waves-effect"><i class="dripicons-box"></i><span>
-                            Authentication <span class="float-right menu-arrow"><i
-                                    class="mdi mdi-chevron-right"></i></span> </span></a>
+                            Authentication <span class="float-right menu-arrow"><i class="mdi mdi-chevron-right"></i></span> </span></a>
                     <ul class="submenu">
                         <li><a href="pages-login.html">Login</a></li>
                         <li><a href="pages-register.html">Register</a></li>
