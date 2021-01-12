@@ -7,22 +7,30 @@
             <ul class="metismenu" id="side-menu">
                 <li class="menu-title">Main</li>
                 <li>
-                    <a href="index.html" class="waves-effect">
+                    <a href="{{url('/dashboard')}}" class="waves-effect">
                         <i class="dripicons-meter"></i><span class="badge badge-info badge-pill float-right">2</span>
                         <span> Dashboard </span>
                     </a>
                 </li>
                 <li>
-                    <a href="javascript:void(0);" class="waves-effect"><i class="dripicons-message"></i><span> Department
+                    <a href="javascript:void(0);" class="waves-effect"><i class="dripicons-department"></i><span> Department
                             <span class="float-right menu-arrow"><i class="mdi mdi-chevron-right"></i></span>
                         </span></a>
                     <ul class="submenu">
                         <li><a href="{{route('departments.index')}}">Department List</a></li>
                     </ul>
                 </li>
+                <li>
+                    <a href="javascript:void(0);" class="waves-effect"><i class="dripicons-role"></i><span> Role
+                            <span class="float-right menu-arrow"><i class="mdi mdi-chevron-right"></i></span>
+                        </span></a>
+                    <ul class="submenu">
+                        <li><a href="{{route('roles.index')}}">Role List</a></li>
+                    </ul>
+                </li>
 
                 <li>
-                    <a href="calendar.html" class="waves-effect"><i class="dripicons-calendar"></i><span> Calendar
+                    <a href="{{route('users.index')}}" class="waves-effect"><i class="dripicons-user"></i><span> User Maneger
                         </span></a>
                 </li>
 

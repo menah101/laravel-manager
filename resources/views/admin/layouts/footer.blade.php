@@ -12,7 +12,6 @@
 
 </div>
 <!-- END wrapper -->
-
 <script src="{{ asset('backend/assets/js/bootstrap.bundle.min.js') }}"></script>
 <script src="{{ asset('backend/assets/js/modernizr.min.js') }}"></script>
 <script src="{{ asset('backend/assets/js/metisMenu.min.js') }}"></script>
