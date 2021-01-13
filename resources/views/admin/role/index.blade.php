@@ -23,9 +23,11 @@
                         </div>
                         <div class="col-md-4">
                             <div class="float-right d-none d-md-block">
+                                @if(isset(auth()->user()->role->permission['name']['role']['can-add']))
                                 <a href="{{route('roles.create')}}" class="btn btn-primary btn-rounded">
                                     <i class="ti-settings mr-1"></i> Add News
                                 </a>
+                                @endif
                             </div>
                         </div>
                     </div>
@@ -66,12 +68,16 @@
                                     <td>{{$role->description}}</td>
                                     <td>
                                         <div class=" button-items">
+                                            @if(isset(auth()->user()->role->permission['name']['role']['can-edit']))
                                             <a href="{{route('roles.edit',[$role->id])}}" class="btn btn-secondary waves-effect">
                                                 <i class="fa fa-edit"></i>
                                             </a>
+                                            @endif
+                                            @if(isset(auth()->user()->role->permission['name']['role']['can-delete']))
                                             <button class="btn btn-primary waves-effect waves-light" data-toggle="modal" data-target="#myModal{{$role->id}}">
                                                 <i class="fa fa-trash"></i>
                                             </button>
+                                            @endif
                                             <div id="myModal{{$role->id}}" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                                                 <div class="modal-dialog">
                                                     <form action="{{route('roles.destroy', [$role->id])}}" method="post">

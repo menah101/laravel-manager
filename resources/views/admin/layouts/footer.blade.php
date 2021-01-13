@@ -21,10 +21,10 @@
 <script src="{{ asset('backend/plugins/peity-chart/jquery.peity.min.js') }}"></script>
 
 <!--Morris Chart-->
-<script src="{{ asset('backend/plugins/morris/morris.min.js') }}"></script>
+<!-- <script src="{{ asset('backend/plugins/morris/morris.min.js') }}"></script> -->
 <script src="{{ asset('backend/plugins/raphael/raphael-min.js') }}"></script>
 
-<script src="{{ asset('backend/assets/pages/dashboard.js') }}"></script>
+<!-- <script src="{{ asset('backend/assets/pages/dashboard.js') }}"></script> -->
 
 <!-- App js -->
 <script src="{{ asset('backend/assets/js/app.js') }}"></script>

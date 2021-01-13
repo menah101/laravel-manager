@@ -14,7 +14,7 @@
     <link rel="shortcut icon" href="{{  asset('backend/assets/images/favicon.ico') }}">
 
     <!--Morris Chart CSS -->
-    <link rel="stylesheet" href="{{  asset('backend/plugins/morris/morris.css') }}">
+    <!-- <link rel="stylesheet" href="{{  asset('backend/plugins/morris/morris.css') }}"> -->
 
     <!-- Basic Css files -->
     <link href="{{  asset('backend/assets/css/bootstrap.min.css') }}" rel="stylesheet" type="text/css">

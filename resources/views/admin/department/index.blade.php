@@ -23,9 +23,11 @@
                         </div>
                         <div class="col-md-4">
                             <div class="float-right d-none d-md-block">
+                                @if(isset(auth()->user()->role->permission['name']['department']['can-add']))
                                 <a href="{{route('departments.create')}}" class="btn btn-primary btn-rounded">
                                     <i class="ti-settings mr-1"></i> Add News
                                 </a>
+                                @endif
                             </div>
                         </div>
                     </div>
@@ -66,12 +68,16 @@
                                     <td>{{$department->description}}</td>
                                     <td>
                                         <div class=" button-items">
+                                            @if(isset(auth()->user()->role->permission['name']['department']['can-edit']))
                                             <a href="{{route('departments.edit',[$department->id])}}" class="btn btn-secondary waves-effect">
                                                 <i class="fa fa-edit"></i>
                                             </a>
+                                            @endif
+                                            @if(isset(auth()->user()->role->permission['name']['department']['can-delete']))
                                             <button href="#" class="btn btn-primary waves-effect waves-light" data-toggle="modal" data-target="#myModal{{$department->id}}">
                                                 <i class="fa fa-trash"></i>
                                             </button>
+                                            @endif
                                             <div id="myModal{{$department->id}}" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                                                 <div class="modal-dialog">
                                                     <form action="{{route('departments.destroy', [$department->id])}}" method="post">

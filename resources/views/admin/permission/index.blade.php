@@ -15,16 +15,16 @@
                 <div class="page-title-box">
                     <div class="row align-items-center">
                         <div class="col-md-8">
-                            <h4 class="page-title mb-0 ">User</h4>
+                            <h4 class="page-title mb-0 ">Permission</h4>
                             <ol class="breadcrumb m-0">
                                 <li class="breadcrumb-item"><a href="{{url('/dashboard')}}">Dashboard</a></li>
-                                <li class="breadcrumb-item active" aria-current="page">Users</li>
+                                <li class="breadcrumb-item active" aria-current="page">Permissions</li>
                             </ol>
                         </div>
                         <div class="col-md-4">
                             <div class="float-right d-none d-md-block">
-                                @if(isset(auth()->user()->role->permission['name']['user']['can-add']))
-                                <a href="{{route('users.create')}}" class="btn btn-primary btn-rounded">
+                                @if(isset(auth()->user()->role->permission['name']['permission']['can-add']))
+                                <a href="{{route('permissions.create')}}" class="btn btn-primary btn-rounded">
                                     <i class="ti-settings mr-1"></i> Add News
                                 </a>
                                 @endif
@@ -49,52 +49,36 @@
                 @endif
                 <div class="card">
                     <div class="card-body">
-                        <h4 class="mt-0 header-title">List User</h4>
+                        <h4 class="mt-0 header-title">List Permission</h4>
                         <table id="datatable" class="table table-bordered dt-responsive nowrap" style="border-collapse: collapse; border-spacing: 0; width: 100%;">
                             <thead>
                                 <tr>
                                     <th>STT</th>
-                                    <th>Photo</th>
                                     <th>Name</th>
-                                    <th>Email</th>
-                                    <th>Role</th>
-                                    <th>Department</th>
-                                    <th>Designation</th>
-                                    <th>Start Date</th>
-                                    <th>Address</th>
-                                    <th>Mobile</th>
                                     <th>Actions</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                @if(count($users)>0)
-                                @foreach($users as $key=>$user)
+                                @if(count($permissions)>0)
+                                @foreach($permissions as $key=>$permission)
                                 <tr>
                                     <td>{{$key+1}}</td>
-                                    <td><img src="{{asset('images/profile')}}/{{$user->image}}" width="60" height="60"></td>
-                                    <td>{{$user->name}}</td>
-                                    <td>{{$user->email}}</td>
-                                    <td><span class="badge badge-purple">{{$user->role->name??''}}</span></td>
-                                    <td><span class="badge badge-success">{{$user->department->name??''}}</span></td>
-                                    <td>{{$user->designation}}</td>
-                                    <td>{{$user->start_from}}</td>
-                                    <td>{{$user->address}}</td>
-                                    <td>{{$user->mobile_number}}</td>
+                                    <td>{{$permission->role->name}}</td>
                                     <td>
                                         <div class=" button-items">
-                                            @if(isset(auth()->user()->role->permission['name']['user']['can-edit']))
-                                            <a href="{{route('users.edit',[$user->id])}}" class="btn btn-secondary waves-effect">
+                                            @if(isset(auth()->user()->role->permission['name']['permission']['can-edit']))
+                                            <a href="{{route('permissions.edit',[$permission->id])}}" class="btn btn-secondary waves-effect">
                                                 <i class="fa fa-edit"></i>
                                             </a>
                                             @endif
-                                            @if(isset(auth()->user()->role->permission['name']['user']['can-delete']))
-                                            <button class="btn btn-primary waves-effect waves-light" data-toggle="modal" data-target="#myModal{{$user->id}}">
+                                            @if(isset(auth()->user()->role->permission['name']['permission']['can-delete']))
+                                            <button class="btn btn-primary waves-effect waves-light" data-toggle="modal" data-target="#myModal{{$permission->id}}">
                                                 <i class="fa fa-trash"></i>
                                             </button>
                                             @endif
-                                            <div id="myModal{{$user->id}}" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                            <div id="myModal{{$permission->id}}" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                                                 <div class="modal-dialog">
-                                                    <form action="{{route('users.destroy', [$user->id])}}" method="post">
+                                                    <form action="{{route('permissions.destroy', [$permission->id])}}" method="post">
                                                         @csrf
                                                         {{method_field('DELETE')}}
                                                         <div class="modal-content">

@@ -12,7 +12,7 @@
                             <ol class="breadcrumb m-0">
                                 <li class="breadcrumb-item"><a href="{{url('/dashboard')}}">Dashboard</a></li>
                                 <li class="breadcrumb-item"><a href="{{route('users.index')}}">Users</a></li>
-                                <li class="breadcrumb-item active" aria-current="page">Register user</li>
+                                <li class="breadcrumb-item active" aria-current="page">Edit user</li>
                             </ol>
                         </div>
                     </div>
@@ -21,8 +21,9 @@
             </div>
         </div>
         <!-- end row -->
-        <form action="{{route('users.store')}}" method="post" enctype="multipart/form-data">
+        <form action="{{route('users.update', [$user->id])}}" method="post" enctype="multipart/form-data">
             @csrf
+            {{method_field('PUT')}}
             @if(Session::has('message'))
             <div class="alert alert-success alert-dismissible fade show" role="alert">
                 <button type="button" class="close" data-dismiss="alert" aria-label="Close">
@@ -37,37 +38,29 @@
                         <div class="card-body">
                             <h4 class="mt-0 header-title">General Information</h4>
                             <div class="form-group">
-                                <label>First name</label>
-                                <input type="text" name="firstname" class="form-control @error('firstname') is-invalid @enderror" />
-                                @error('firstname')
+                                <label>Full name</label>
+                                <input type="text" name="name" value="{{$user->name}}" class="form-control @error('name') is-invalid @enderror" />
+                                @error('name')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
                                 </span>
                                 @enderror
                             </div>
-                            <div class="form-group">
-                                <label>Last name</label>
-                                <input type="text" name="lastname" class="form-control @error('lastname') is-invalid @enderror" />
-                                @error('lastname')
-                                <span class="invalid-feedback" role="alert">
-                                    <strong>{{ $message }}</strong>
-                                </span>
-                                @enderror
-                            </div>
+
                             <div class="form-group">
                                 <label>Address</label>
-                                <input type="text" name="address" class="form-control" />
+                                <input type="text" name="address" value="{{$user->address}}" class="form-control" />
                             </div>
                             <div class="form-group">
                                 <label>Mobile number</label>
-                                <input type="text" name="mobile_number" class="form-control" />
+                                <input type="text" name="mobile_number" value="{{$user->mobile_number}}" class="form-control" />
                             </div>
                             <div class="form-group">
                                 <label>Department</label>
                                 <select class="form-control @error('department_id') is-invalid @enderror" name="department_id">
                                     <option value="">Select Department</option>
                                     @foreach(App\Department::all() as $department)
-                                    <option value="{{$department->id}}">{{$department->name}}</option>
+                                    <option value="{{$department->id}}" @if($user->department_id==$department->id) selected @endif>{{$department->name}}</option>
                                     @endforeach
                                 </select>
                                 @error('department_id')
@@ -78,7 +71,7 @@
                             </div>
                             <div class="form-group">
                                 <label>Designation</label>
-                                <input type="text" name="designation" class="form-control @error('designation') is-invalid @enderror" />
+                                <input type="text" name="designation" value="{{$user->designation}}" class="form-control @error('designation') is-invalid @enderror" />
                                 @error('designation')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
@@ -87,7 +80,7 @@
                             </div>
                             <div class="form-group">
                                 <label>Strat Date</label>
-                                <input class="form-control" name="start_from" type="date" />
+                                <input class="form-control" name="start_from" value="{{$user->start_from}}" type="date" />
                             </div>
                             <div class="form-group">
                                 <label>Image</label>
@@ -103,7 +96,7 @@
 
                             <div class="form-group">
                                 <label>Email</label>
-                                <input type="text" name="email" class="form-control @error('email') is-invalid @enderror" />
+                                <input type="text" name="email" value="{{$user->email}}" class="form-control @error('email') is-invalid @enderror" />
                                 @error('email')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
@@ -112,19 +105,14 @@
                             </div>
                             <div class="form-group">
                                 <label>Password</label>
-                                <input type="password" name="password" class="form-control @error('password') is-invalid @enderror" />
-                                @error('password')
-                                <span class="invalid-feedback" role="alert">
-                                    <strong>{{ $message }}</strong>
-                                </span>
-                                @enderror
+                                <input type="password" name="password" class="form-control" />
                             </div>
                             <div class="form-group">
                                 <label>Role</label>
                                 <select class="form-control @error('role_id') is-invalid @enderror" name="role_id">
                                     <option value="">Select Role</option>
                                     @foreach(App\Role::all() as $role)
-                                    <option value="{{$role->id}}">{{$role->name}}</option>
+                                    <option value="{{$role->id}}" @if($user->role_id==$role->id) selected @endif>{{$role->name}}</option>
                                     @endforeach
                                 </select>
                                 @error('role_id')
@@ -136,7 +124,7 @@
 
                             <div class="form-group mb-0">
                                 <button type="submit" class="btn btn-primary waves-effect waves-light">
-                                    Submit
+                                    Update
                                 </button>
                             </div>
                         </div>
